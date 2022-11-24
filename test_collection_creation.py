@@ -38,9 +38,9 @@ class Test_qamarket_create_collection_public:
         self.driver.maximize_window()
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[1]/div[2]/div').click()
         user=self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[1]/div[10]/div/div[2]/div/div/div/div[2]/div/div/input')
-        user.send_keys('niyog4april')
+        user.send_keys('')
         password=self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[1]/div[10]/div/div[2]/div/div/div/div[3]/div/div/input')
-        password.send_keys('Test@123')
+        password.send_keys('')
         self.driver.find_element_by_xpath("//button[@class='MuiButtonBase-root MuiButton-root MuiButton-contained']").click()
         time.sleep(10)
 
