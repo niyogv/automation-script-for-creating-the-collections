@@ -15,17 +15,17 @@ from utlities.utlis import Home
 class Test_qamarket_create_collection_public:
 
 # This is a function which reads data of test1 from excel sheet
-    @pytest.fixture(params=Home.readDataCollection('test1'))
+    @pytest.fixture(params=Home.readDataCollection('test1')) # the name of the test which is mentioned under the xl sheet
     def getdata(self,request):
         return request.param
 
 # This is a function which reads data of test2 from excel sheet
-    @pytest.fixture(params=Home.readDataCollection('test2'))
+    @pytest.fixture(params=Home.readDataCollection('test2')) # the name of the test which is mentioned under the xl sheet
     def getdata1(self,request):
         return request.param
 
 # This is a function which reads data of test3 from excel sheet
-    @pytest.fixture(params=Home.readDataCollection('test3'))
+    @pytest.fixture(params=Home.readDataCollection('test3')) # the name of the test which is mentioned under the xl sheet
     def getdata2(self,request):
         return request.param
 
