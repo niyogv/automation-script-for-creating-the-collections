@@ -1,5 +1,5 @@
 # This is an automation script of python
-# Application name : devmarket.moiverse.io
+# Application name : 
 # Author : Niyog V
 # Test scenario : Creating collection with different scenario
 # date : 01-04-2022
@@ -34,7 +34,7 @@ class Test_qamarket_create_collection_public:
     def test_Invoke(self):
         self.driver=webdriver.Chrome(executable_path='/Applications/chromedriver')
         wait=WebDriverWait(self.driver,10)
-        self.driver.get('https://devmarket.moiverse.io/')
+        self.driver.get('')  // Web url
         self.driver.maximize_window()
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[1]/div[2]/div').click()
         user=self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[1]/div[10]/div/div[2]/div/div/div/div[2]/div/div/input')
@@ -49,7 +49,7 @@ class Test_qamarket_create_collection_public:
         self.driver.find_element_by_xpath("//div[@class='styles_account__3MgT6 styles_menuLink__17kgw']").click()
         self.driver.find_element_by_xpath("//ul[@class='MuiList-root MuiMenu-list styles_menuList__33Jfh MuiList-padding']/div[2]").click()
         time.sleep(4)
-        self.driver.find_element_by_xpath("//input[@type='file']").send_keys('/Users/aicumen-dev/Downloads/')
+        self.driver.find_element_by_xpath('') # Path of the image to upload
         self.driver.find_element_by_xpath("//input[@placeholder='Collection Name']").send_keys(getdata['name'])
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[3]/div/div[2]/div[2]/div[2]/textarea').send_keys(getdata['description'])
         self.driver.find_element_by_xpath("//input[@placeholder='Collection Royalty']").send_keys(getdata['royality'])
@@ -57,7 +57,7 @@ class Test_qamarket_create_collection_public:
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[3]/div/div[1]/div[2]/div[4]/div').click()
         time.sleep(30)
         try:
-            if self.driver.title=='MoiVerse Marketplace':
+            if self.driver.title=='': # The web page name
                 assert True
             else:
                 assert False
@@ -70,7 +70,7 @@ class Test_qamarket_create_collection_public:
         self.driver.find_element_by_xpath("//div[@class='styles_account__3MgT6 styles_menuLink__17kgw']").click()
         self.driver.find_element_by_xpath("//ul[@class='MuiList-root MuiMenu-list styles_menuList__33Jfh MuiList-padding']/div[2]").click()
         time.sleep(4)
-        self.driver.find_element_by_xpath("//input[@type='file']").send_keys('/Users/aicumen-dev/Downloads/')
+        self.driver.find_element_by_xpath("//input[@type='file']").send_keys('') # The path where image is located
         self.driver.find_element_by_xpath("//input[@placeholder='Collection Name']").send_keys(getdata1['name'])
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[3]/div/div[2]/div[2]/div[2]/textarea').send_keys(getdata1['description'])
         self.driver.find_element_by_xpath("//input[@placeholder='Collection Royalty']").send_keys(getdata1['royality'])
@@ -78,7 +78,7 @@ class Test_qamarket_create_collection_public:
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[3]/div/div[1]/div[2]/div[4]/div').click()
         time.sleep(10)
         try:
-            if self.driver.title=='MoiVerse Marketplace':
+            if self.driver.title=='': # The web page name
                 assert False,'Collection name already exist'
             else:
                 assert True
@@ -91,7 +91,7 @@ class Test_qamarket_create_collection_public:
         self.driver.find_element_by_xpath("//div[@class='styles_account__3MgT6 styles_menuLink__17kgw']").click()
         self.driver.find_element_by_xpath("//ul[@class='MuiList-root MuiMenu-list styles_menuList__33Jfh MuiList-padding']/div[2]").click()
         time.sleep(4)
-        self.driver.find_element_by_xpath("//input[@type='file']").send_keys('/Users/aicumen-dev/Downloads/')
+        self.driver.find_element_by_xpath("//input[@type='file']").send_keys('') # The path of the image to be uploaded
         self.driver.find_element_by_xpath("//input[@placeholder='Collection Name']").send_keys(getdata2['name'])
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[3]/div/div[2]/div[2]/div[2]/textarea').send_keys(getdata2['description'])
         self.driver.find_element_by_xpath("//input[@placeholder='Collection Royalty']").send_keys(getdata2['royality'])
@@ -99,7 +99,7 @@ class Test_qamarket_create_collection_public:
         self.driver.find_element_by_xpath('//*[@id="root"]/div[1]/div[3]/div/div[1]/div[2]/div[4]/div').click()
         time.sleep(10)
         try:
-            if self.driver.title=='MoiVerse Marketplace':
+            if self.driver.title=='': #The web page name
                 assert False,'Collection name already exist'
             else:
                 assert True
